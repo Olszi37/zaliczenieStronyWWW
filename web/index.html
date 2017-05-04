@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fotoblogasek - Logowanie</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<header></header>
+    <main>
+        <form id="loginForm">
+            <p>Login:</p><br>
+            <input name="login" autofocus type="text">
+            <p>Hasło:</p><br>
+            <input name="password" type="password">
+        </form>
+        <button id="loginButton" onclick="authenticate()">Zaloguj</button>
+        <button id="registerButton" onclick="redirectRegister()">Rejestracja</button><br>
+        <p id="loginInfo"></p>
+    </main>
+<footer></footer>
+</body>
+</html>
