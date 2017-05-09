@@ -1,0 +1,16 @@
+body {
+    background-color: #323232;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    color: #d6d6d6;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    background-color: #272727;
+    width: 100%;
+}

@@ -1,0 +1,34 @@
+header {
+    height: 100px;
+}
+
+#userName {
+    font-size: x-large;
+}
+
+#naglowekDiv {
+    margin-left: 30px;
+}
+
+main {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: auto;
+}
+
+#leftPanel {
+    background-color: aqua;
+    flex: 1;
+}
+
+#central {
+    background-color: antiquewhite;
+    flex: 3;
+}
+
+iframe {
+    border: none;
+}

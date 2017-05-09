@@ -6,15 +6,26 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/register.js"></script>
+    <script src="js/database.js"></script>
+    <link rel="stylesheet" href="css/commons.css" type="text/css">
+    <link rel="stylesheet" href="css/register.css" type="text/css">
 </head>
 <body>
-<form id="registerForm">
-    Login:<br>
-    <input id="login" name="login" autofocus type="text"><br>
-    Hasło:<br>
-    <input id="password" name="password" type="password"><br>
-    <button id="registerButton" onclick="saveUser()">Zarejestruj</button>
-</form>
-
+<header>
+    <div id="naglowekDiv">
+        <p id="logo">Fotoblogasek</p>
+        <p id="naglowek">Dziel się zdjęciami ze znajomymi</p>
+    </div>
+</header>
+<main>
+    <div id="registerDiv">
+        <p>Login:</p>
+        <input id="login" name="login" autofocus type="text">
+        <p>Hasło:</p>
+        <input id="password" name="password" type="password">
+        <br><br>
+        <button id="registerButton" onclick="saveUser()">Zarejestruj</button>
+    </div>
+</main>
 </body>
 </html>

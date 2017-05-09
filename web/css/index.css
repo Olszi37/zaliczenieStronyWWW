@@ -1,0 +1,41 @@
+#logo {
+    font-size: x-large;
+}
+
+#naglowek, #stopka {
+    font-size: small;
+}
+
+#stopka {
+    margin-left: 30px;
+}
+
+header {
+    height: 200px;
+}
+
+main {
+    margin-top: 200px;
+}
+
+footer {
+    width: 100%;
+    background-color: #272727;
+    height: 50px;
+    bottom: 0px;
+    position: fixed;
+}
+
+#naglowekDiv {
+    margin-left: 30px;
+}
+
+#loginContent {
+    float: left;
+    margin-left: 5%;
+}
+
+#searchContent {
+    float: left;
+    margin-left: 30%;
+}

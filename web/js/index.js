@@ -2,33 +2,53 @@
  * Created by Siny on 2017-04-30.
  */
 
-function authenticate(){
-    var db = window.openDatabase('fotoblogasek', '1.0', 'fotoblogasek', 10 * 1024 * 1024)
+$(document).ready( function () {
 
-    var login = $("#login").val()
-    var password = $("#password").val()
+})
+
+function authenticate(){
+    var db = getDatabase()
+
+    var fieldLogin = $("#login").val()
 
     db.transaction(function (tx) {
-        tx.executeSql("SELECT login, haslo FROM uzytkownicy WHERE login = ?", [login], checkData(SQLTransaction, data))
+        tx.executeSql("SELECT * FROM uzytkownicy WHERE login = ?", [fieldLogin],
+            function(tx, data) {
+                checkData(tx, data)
+            }, function(tx, error) {
+                throwAlert(tx, error)
+            })
     })
 }
 
-function checkData(SQLTransaction, data){
-    var row = data.rows.item(0)
+function checkData(tx, data){
 
-    var loginFromDb = row['login']
-    var login = $("#login").text()
-    var passwordFromDb = row['password'];
-    var password = $("#password").val()
+    console.log(data.rows.length)
+    if(data.rows.length != 0){
+        var row = data.rows.item(0)
 
-    if (login == loginFromDb) {
-        if (password == passwordFromDb)
-            window.location.href = "";
+        var loginFromDb = row['login']
+        var login = $("#login").text()
+        var passwordFromDb = row['haslo'];
+        var password = $("#password").val()
+
+        if (login == loginFromDb) {
+            if (password == passwordFromDb){
+                //window.location.href = "";
+                console.log("zalogowany")
+            }
+            else
+                authAlert()
+        }
         else
             authAlert()
+    } else {
+        console.log("db data fetch failure")
     }
-    else
-        authAlert()
+}
+
+function throwAlert(tx, error){
+    console.log(error.message)
 }
 
 function authAlert() {
@@ -37,4 +57,18 @@ function authAlert() {
 
 function redirectRegister(){
     window.location.href = "register.html"
+}
+
+function searchSomeone(){
+    var db = getDatabase()
+
+    var searchLogin = $("#searchLogin").val()
+
+    db.transaction( function (tx) {
+        tx.executeSql("SELECT id FROM uzytkownicy WHERE login = ?", [searchLogin], function (tx, data) {
+
+        }, function (tx, error) {
+            console.log(error.message)
+        })
+    })
 }

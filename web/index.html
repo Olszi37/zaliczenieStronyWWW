@@ -6,21 +6,38 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/database.js"></script>
     <link type="text/css" href="css/index.css" rel="stylesheet">
+    <link type="text/css" href="css/commons.css" rel="stylesheet">
 </head>
 <body>
-<header></header>
+<header>
+    <div id="naglowekDiv">
+        <p id="logo">Fotoblogasek</p>
+        <p id="naglowek">Dziel się zdjęciami ze znajomymi</p>
+    </div>
+</header>
     <main>
-        <form id="loginForm">
-            <p>Login:</p><br>
-            <input name="login" autofocus type="text">
-            <p>Hasło:</p><br>
-            <input name="password" type="password">
-        </form>
-        <button id="loginButton" onclick="authenticate()">Zaloguj</button>
-        <button id="registerButton" onclick="redirectRegister()">Rejestracja</button><br>
-        <p id="loginInfo"></p>
+        <div id="loginContent">
+            <form id="loginForm">
+                <p>Login:</p>
+                <input name="login" autofocus type="text">
+                <p>Hasło:</p>
+                <input name="password" type="password">
+            </form>
+            <br>
+            <button id="loginButton" onclick="authenticate()">Zaloguj</button>
+            <button id="registerButton" onclick="redirectRegister()">Rejestracja</button><br>
+            <p id="loginInfo"></p>
+        </div>
+        <div id="searchContent">
+            <p>Wyszukaj kogoś:</p><br>
+            <input name="searchLogin" type="text">
+            <button id="searchButton" onclick="searchSomeone()">Wyszukaj</button>
+        </div>
     </main>
-<footer></footer>
+<footer>
+<p id="stopka">Opracował: Michał Olszak</p>
+</footer>
 </body>
 </html>
