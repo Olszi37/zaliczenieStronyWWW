@@ -1,0 +1,39 @@
+body {
+    margin: 50px;
+}
+
+#imageDropZone {
+    height: 300px;
+    width: 600px;
+    background-color: #606060;
+}
+
+#imageDropZone.hover {
+    background-color: rgba(255, 2, 0, 0.24);
+}
+
+#description {
+    height: 100px;
+    width: 300px;
+}
+
+#title {
+    width: 300px;
+}
+
+#dropZoneHint {
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+#image {
+    max-height: 300px;
+    max-width: 600px;
+}

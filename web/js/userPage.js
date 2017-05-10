@@ -3,6 +3,9 @@
  */
 
 $(document).ready( function () {
-    
+
 });
 
+function redirectAddPhoto(){
+    $("#photoPage").attr("src", "addPhoto.html");
+}

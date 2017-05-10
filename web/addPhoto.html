@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <title>Dodaj zdjecie</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/commons.css" type="text/css">
+    <link rel="stylesheet" href="css/addPhoto.css" type="text/css">
+    <script src="js/addPhoto.js"></script>
+    <script src="js/database.js"></script>
 
 </head>
 <body>
 <div>
-    <input id="photo" type="file">
-    <input id="title" type="text">
-    <input id="description" type="text">
+    <div id="imageDropZone">
+        <p id="dropZoneHint">Upuść zdjęcie tutaj</p>
+        <img id="image" class="hidden"/>
+    </div>
+    <input id="fileInput" type="file"/>
+    <p>Tytuł</p>
+    <input id="title" type="text"/>
+    <p>Opis</p>
+    <input id="description" type="text"/>
     <button onclick="">Zapisz</button>
 </div>
 

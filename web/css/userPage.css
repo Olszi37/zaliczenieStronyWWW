@@ -20,12 +20,10 @@ main {
 }
 
 #leftPanel {
-    background-color: aqua;
     flex: 1;
 }
 
 #central {
-    background-color: antiquewhite;
     flex: 3;
 }
 
