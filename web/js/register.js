@@ -31,7 +31,7 @@ function saveUser(){
 function userAdded(){
     console.log("uzytkownik dodany")
 
-    sessionStorage.setItem("user_create_succes", "Rejestracja przebiegła pomyślnie. Możesz się zalogować!")
+    sessionStorage.setItem("user_create_success", "Rejestracja przebiegła pomyślnie. Możesz się zalogować!")
 
     window.location.href = "index.html"
 }
